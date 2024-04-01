@@ -40,6 +40,13 @@ public:
 
 	// }*/
 
+	// destuctor (удалитель памяти)
+
+	~Student() {
+		cout << "Destructor was calling" << endl;
+		// ...
+	}
+
 
 	string convert() {
 		string s = "";
