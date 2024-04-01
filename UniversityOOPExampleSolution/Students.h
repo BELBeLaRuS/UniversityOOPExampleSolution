@@ -6,14 +6,14 @@ class Student {
 public:
 	string name;
 	int age;
-	double mark;
+	double* mark;
 
 	// default consrtuctor (конструктор по умолчанию)
 	Student() {
 		cout << "Default consrtuctor is calling" << endl;
 		name = "no name";
 		age = 6;
-		mark = 4;
+		mark = new double[5];
 	}
 
 	//Student(string nm) {
@@ -32,7 +32,7 @@ public:
 		//cout << " canonical consrtuctor sith arguments was calling" << endl;
 		name = nm;
 		age = a;
-		mark = m;
+		mark = new double[5];
 	}
 	//// copy-constructor(конструкток копирования BETA)
 
@@ -45,6 +45,7 @@ public:
 	~Student() {
 		cout << "Destructor was calling" << endl;
 		// ...
+		delete[] mark;
 	}
 
 
