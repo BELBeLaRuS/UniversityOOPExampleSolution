@@ -3,9 +3,9 @@
 
 int main() {
 	Student st1("Alex");
-	Student st2("Potter");
-	Student st3("Alice");
-	Student st4("Peter");
+	Student st2("Potter", 14, 9);
+	Student st3("Alice", 15, 10);
+	Student st4("Peter", 13, 7);
 
 	/*st1.name = "Alex";
 	st1.age = 14;

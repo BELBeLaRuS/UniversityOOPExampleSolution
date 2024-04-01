@@ -36,9 +36,9 @@ public:
 	}
 	// copy-constructor(конструкток копирования BETA)
 
-	Student(const Student& student) {
+	/*Student(const Student& student) {
 
-	 }
+	 }*/
 
 
 	string convert() {
