@@ -16,6 +16,31 @@ public:
 		mark = 4;
 	}
 
+	Student(string nm) {
+		//cout << "consrtuctor sith arguments was calling" << endl;
+		name = nm;
+	}
+
+	Student(string nm, int a) {
+		//cout << "consrtuctor sith arguments was calling" << endl;
+		name = nm;
+		age = a;
+	}
+
+	// canonical consrtuctor (канонический конструктор)
+	Student(string nm, int a, double m) {
+		//cout << " canonical consrtuctor sith arguments was calling" << endl;
+		name = nm;
+		age = a;
+		mark = m;
+	}
+	// copy-constructor(конструкток копирования BETA)
+
+	Student(const Student& student) {
+
+	 }
+
+
 	string convert() {
 		string s = "";
 		s += name;
