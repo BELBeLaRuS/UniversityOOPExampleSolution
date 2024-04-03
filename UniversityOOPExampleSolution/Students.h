@@ -10,7 +10,7 @@ public:
 
 	// default consrtuctor (конструктор по умолчанию)
 	Student() {
-		cout << "Default consrtuctor was calling" << endl;
+		//cout << "Default consrtuctor was calling" << endl;
 		name = "no name";
 		age = 6;
 		mark = 4;
@@ -42,10 +42,10 @@ public:
 
 	// destuctor (удалитель памяти)
 
-	~Student() {
-		cout << "Destructor was calling" << endl;
-		// ...
-	}
+	//~Student() {
+	//	cout << "Destructor was calling" << endl;
+	//	// ...
+	//}
 
 
 	string convert() {
