@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Students.h"
+#include "Manager.h"
 
 int main() {
 	/*Student st1("Alex");
-	Student st2("Potter", 14, 9);
+	Student st2("Potter", 14, 9); 
 	Student st3("Alice", 15, 10);
 	Student st4("Peter", 13, 7); */
 
