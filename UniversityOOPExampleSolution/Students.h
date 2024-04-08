@@ -3,10 +3,12 @@
 using namespace std;
 
 class Student {
-public:
+private:
 	string name;
 	int age;
 	double mark;
+
+public:
 
 	// default consrtuctor (конструктор по умолчанию)
 	Student() {
@@ -41,12 +43,38 @@ public:
 	// }*/
 
 	// destuctor (удалитель памяти)
+	~Student() {
+		//	cout << "Destructor was calling" << endl;
+		//	// ...
+	}
 
-	//~Student() {
-	//	cout << "Destructor was calling" << endl;
-	//	// ...
-	//}
+	string getName() {
+		return name;
+	}
 
+	/*void setName(string nm) {
+		name = nm;
+	}*/
+
+	int getAge() {
+		return age;
+	}
+
+	void setAge(int a) {
+		if (a > 0 && a < 100) {
+			age = a;
+		}
+	}
+
+	double getMark() {
+		return mark;
+	}
+
+	void setMark(double m) {
+		if (m >= 0 && m <= 10) {
+			mark = m;
+		}
+	}
 
 	string convert() {
 		string s = "";
