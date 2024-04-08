@@ -6,7 +6,7 @@ int main() {
 	Student st1{ "Alex", 14, 9 };
 	Student st2{ "Alice", 14, 7 };
 	Student st3{ "Steve", 15, 10 };
-	Student st4{ "Matvey", 14, 6 };
+	Student st4{ "Jamal", 14, 6 };
 	Student st5{ "Pablo", 14, 4 };
 
 	cout << st1.convert() << endl;
