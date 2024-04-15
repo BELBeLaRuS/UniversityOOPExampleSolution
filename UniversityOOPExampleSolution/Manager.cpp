@@ -1,6 +1,6 @@
 #include "Manager.h"
 
-double double Manager::getMaxMark(Student* list, int length) {
+double Manager::getMaxMark(Student* list, int length) {
 		double max = list[0].getMark;
 
 		for (int i = 1; i < length; i++)

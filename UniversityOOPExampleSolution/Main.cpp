@@ -9,9 +9,8 @@ int main() {
 	Student* point_st = new Student();
 
 	cout << point_st->convert() << endl;
-	
+
 
 	delete point_st;
-
 	return 0;
 }

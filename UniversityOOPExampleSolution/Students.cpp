@@ -21,11 +21,11 @@ Student::Student() {
 //}
 
 //// canonical consrtuctor (канонический конструктор)
-Student::Student(string nm, int a = 14, double m = 4) {
+Student::Student(string nm, int age = 14, double mark = 4) {
 	//cout << " canonical consrtuctor sith arguments was calling" << endl;
-	name = nm;
-	age = a;
-	mark = m;
+	this->name = nm;
+	this->age = age;
+	this->mark = mark;
 }
 //// copy-constructor(конструкток копирования BETA)
 
@@ -51,9 +51,9 @@ int Student::getAge() {
 	return age;
 }
 
-void Student::setAge(int a) {
-	if (a > 0 && a < 100) {
-		age = a;
+void Student::setAge(int age) {
+	if (age > 0 && age < 100) {
+		this->age = age;
 	}
 }
 
@@ -61,9 +61,9 @@ double Student::getMark() {
 	return mark;
 }
 
-void Student::setMark(double m) {
-	if (m >= 0 && m <= 10) {
-		mark = m;
+void Student::setMark(double mark) {
+	if (mark >= 0 && mark <= 10) {
+		this->mark = mark;
 	}
 }
 
