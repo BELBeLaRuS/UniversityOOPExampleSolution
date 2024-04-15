@@ -1,50 +1,51 @@
 #include "Manager.h"
+#include "Group.h"
 
-double Manager::getMaxMark(Student* list, int length) {
-		double max = list[0].getMark;
+double Manager::getMaxMark(Group group) {
+		double max = group.get(0).getMark();
 
-		for (int i = 1; i < length; i++)
+		for (int i = 1; i < group.getSize(); i++)
 		{
-			if (list[i].getMark > max) {
-				max = list[i].getMark;
+			if (group.get(i).getMark > max) {
+				max = group.get(i).getMark;
 			}
 		}
 
 		return max;
 	}
 
-	double Manager::getMinMark(Student* list, int length) {
-		double min = list[0].getMark;
+	double Manager::getMinMark(Group group) {
+		double min = group.get(0).getMark;
 
-		for (int i = 1; i < length; i++)
+		for (int i = 1; i < group.getSize(); i++)
 		{
-			if (list[i].getMark < min) {
-				min = list[i].getMark;
+			if (group.get(i).getMark < min) {
+				min = group.get(i).getMark;
 			}
 		}
 
 		return min;
 	}
 
-	double Manager::CalcAvgMark(Student* list, int length) {
+	double Manager::CalcAvgMark(Group group) {
 		double avg = 0;
 
-		for (int i = 0; i < length; i++)
+		for (int i = 0; i < group.getSize(); i++)
 		{
-			avg += list[i].getMark;
+			avg += group.get(i).getMark;
 		}
 
-		return avg / length;
+		return avg / group.getSize();
 	}
 
-	Student Manager::getBestStudent(Student* list, int length) {
-		double mark = getMaxMark(list, length);
+	Student Manager::getBestStudent(Group group) {
+		double mark = getMaxMark(group);
 		Student st;
 
-		for (int i = 0; i < length; i++)
+		for (int i = 0; i < group.getSize(); i++)
 		{
-			if (list[i].getMark == mark) {
-				st = list[i];
+			if (group.get(i).getMark == mark) {
+				st = group.get(i);
 				break;
 			}
 		}
@@ -52,65 +53,65 @@ double Manager::getMaxMark(Student* list, int length) {
 		return st;
 	}
 
-	Student Manager::getWorstStudent(Student* list, int length) {
-		double mark = getMinMark(list, length);
+	Student Manager::getWorstStudent(Group group) {
+		double mark = getMinMark(group);
 		Student st;
 
-		for (int i = 0; i < length; i++)
+		for (int i = 0; i < group.getSize(); i++)
 		{
-			if (list[i].getMark == mark) {
-				st = list[i];
+			if (get(i).getMark == mark) {
+				st = group.get(i);
 				break;
 			}
 		}
 
 		return st;
 	}
-	Student Manager::getMaxMark(Student* list, int length) {
-	double max = list[0].getMark;
+Student Manager::getMaxMark(Group group) {
+	double max = group.get(i).getMark;
 
-	for (int i = 1; i < length; i++)
+	for (int i = 1; i < group.getSize(); i++)
 	{
-		if (list[i].getMark > max) {
-			max = list[i].getMark;
+		if (group.get(i).getMark > max) {
+			max = group.get(i).getMark;
 		}
 	}
 
 	return max;
 }
 
-double Manager::getMinMark(Student* list, int length) {
-	double min = list[0].getMark;
+double Manager::getMinMark(Group group) {
+	double min = group.get(0).getMark;
 
-	for (int i = 1; i < length; i++)
+	for (int i = 1; i < group.getSize(); i++)
 	{
-		if (list[i].getMark < min) {
-			min = list[i].getMark;
+		if (group.get(i).getMark < min) {
+			min = group.get(i).getMark;
 		}
 	}
 
 	return min;
 }
 
-double Manager::CalcAvgMark(Student* list, int length) {
+double Manager::CalcAvgMark(Group group) {
 	double avg = 0;
 
-	for (int i = 0; i < length; i++)
+	for (int i = 0; i < group.getSize(); i++)
 	{
-		avg += list[i].getMark;
+		avg += group.get(i).getMark;
 	}
 
-	return avg / length;
+	return avg / group.getSize();
 }
 
-Student Manager::getBestStudent(Student* list, int length) {
-	double mark = getMaxMark(list, length);
+Student Manager::getBestStudent(Group group) {
+	double mark = getMaxMark(group);
 	Student st;
 
-	for (int i = 0; i < length; i++)
+	for (int i = 0; i < group.getSize(); i++)
 	{
-		if (list[i].getMark == mark) {
-			st = list[i];
+		if (group.get(i).getMark == mark) {
+			st = group.get(i);
 			break;
 		}
 	}
@@ -118,14 +119,14 @@ Student Manager::getBestStudent(Student* list, int length) {
 	return st;
 }
 
-Student Manager::getWorstStudent(Student* list, int length) {
-	double mark = getMinMark(list, length);
+Student Manager::getWorstStudent(Group group) {
+	double mark = getMinMark(group);
 	Student st;
 
-	for (int i = 0; i < length; i++)
+	for (int i = 0; i < group.getSize(); i++)
 	{
-		if (list[i].getMark == mark) {
-			st = list[i];
+		if (group.get(i).getMark == mark) {
+			st = group.get(i);
 			break;
 		}
 	}

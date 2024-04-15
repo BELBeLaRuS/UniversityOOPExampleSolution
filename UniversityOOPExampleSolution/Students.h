@@ -11,17 +11,17 @@ private:
 public:
 
 	Student();
-	Student(string name, int age = 14, double mark = 4);
+	Student(string, int, double);
 
 	~Student();
 
 	string getName();
 
 	int getAge();
-	void setAge(int age);
+	void setAge(int);
 
 	double getMark();
-	void setMark(double mark);
+	void setMark(double);
 	string convert();
 
 };
