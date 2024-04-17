@@ -1,5 +1,13 @@
 #include "Students.h"
 
+// static class components
+int Student::count = 0;
+
+int Student::getCount() {
+	return count;
+}
+
+// dynamic class components
 
 // default consrtuctor (конструктор по умолчанию)
 Student::Student() : Student("no_name", 6, 4) {
@@ -9,10 +17,11 @@ Student::Student() : Student("no_name", 6, 4) {
 	mark = 4;*/
 }
 
-//Student(string nm) {
-//	//cout << "consrtuctor sith arguments was calling" << endl;
-//	name = nm;
-//}
+Student::Student(string name) : name(name) {
+	//cout << "consrtuctor sith arguments was calling" << endl;
+	name = name;
+
+}
 
 //Student(string nm, int a) {
 //	//cout << "consrtuctor sith arguments was calling" << endl;
@@ -23,6 +32,7 @@ Student::Student() : Student("no_name", 6, 4) {
 //// canonical consrtuctor (канонический конструктор)
 Student::Student(string name, int age, double mark) 
 	: name(name), age(age), mark(mark) {
+	count++;
 	//cout << " canonical consrtuctor sith arguments was calling" << endl;
 }
 //// copy-constructor(конструкток копирования BETA)
@@ -35,6 +45,7 @@ Student::Student(string name, int age, double mark)
 Student::~Student() {
 	//	cout << "Destructor was calling" << endl;
 	//	// ...
+	count--;
 }
 
 string Student::getName() {
@@ -50,7 +61,7 @@ int Student::getAge() {
 }
 
 void Student::setAge(int age) {
-	if (age > 0 && age < 100) {
+	if (age > MIN_AGE && age < MAX_AGE) {
 		this->age = age;
 	}
 }
@@ -60,7 +71,7 @@ double Student::getMark() {
 }
 
 void Student::setMark(double mark) {
-	if (mark >= 0 && mark <= 10) {
+	if (mark >= MIN_MARK && mark <= MAX_MARK) {
 		this->mark = mark;
 	}
 }

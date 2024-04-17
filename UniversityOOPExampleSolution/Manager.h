@@ -3,14 +3,14 @@
 #include "Group.h"
 
 class Manager {
-public: 
-	double getMaxMark(Group group);
+public:
+	static double getMaxMark(Group group);
 
-	double getMinMark(Group group);
+	static double getMinMark(Group group);
 
-	double CalcAvgMark(Group group);
+	static double CalcAvgMark(Group group);
 
-	Student getBestStudent(Group group);
+	static Student getBestStudent(Group group);
 
-	Student getWorstStudent(Group group);
+	static Student getWorstStudent(Group group);
 };
