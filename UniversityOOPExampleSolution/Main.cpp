@@ -1,23 +1,27 @@
 #include <iostream>
 #include "Manager.h"
 
-void test() {
-	Student st1{ "Alex", 14, 9 };
-	Student st2{ "Alex", 14, 9 };
-	Student st3{ "Alex", 14, 9 }; 
-	Student st4{ "Alex", 14, 9 };
-}
 
 int main() {
-	test();
-	Student st1{ "Alex", 14, 9 };
-	Student st2{ "Alex", 14, 9 };
-	Student st3{ "Alex", 14, 9 };
+
+	Group groupA;
+
+	Student st1{ Alex, 14, 10 };
+	Student st2{ Peter, 15, 6 };
+	Student st3{ Alice, 16, 9 };
+
 	
-
-
-
-	cout << Student::getCount()<< endl;
 	
+	groupA.add(st1);
+	groupA.add(st2);
+	groupA.add(st3);
+
+	cout << "Before remove: " << endl;
+	cout << groupA.convertTostring() << endl;
+
+	groupA.remove(st3);
+
+	cout << "After remove: " << endl;
+	cout << groupA.convertTostring() << endl;
 	return 0;
 }
