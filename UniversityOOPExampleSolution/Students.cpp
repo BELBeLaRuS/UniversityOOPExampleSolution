@@ -84,4 +84,3 @@ string Student::convert() {
 
 	return s;
 }
-
